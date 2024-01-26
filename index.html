@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    
+    
+    function getComputerChoice(){
+        let compChoice = Math.floor(Math.random() * 3);
+        console.log(compChoice);
+
+        if (compChoice == 1){
+            return 'rock';
+        }
+        else if (compChoice == 2){
+            return 'paper';
+        }
+        else{
+            return 'scissors';
+        }
+
+
+    }
+
+    
+    const playerSelection = 'rock';
+    const CompterSelection = getComputerChoice();
+    playerSelection.toLocaleLowerCase();
+    
+    function playRound(playerSelection, CompterSelection){
+        console.log(CompterSelection);
+
+        if (playerSelection==='rock' && CompterSelection === 'paper'){
+            return 'You Lose! Paper beats Rock';
+        }
+
+        else if (playerSelection==='rock' && CompterSelection === 'scissors'){
+            return 'You Win! Rock beats Scissors';
+        }
+
+        else if (playerSelection === 'rock' && CompterSelection === 'rock'){
+
+        }
+    }
+
+
+    console.log(playRound(playerSelection, CompterSelection));
+</script>
+</html>
