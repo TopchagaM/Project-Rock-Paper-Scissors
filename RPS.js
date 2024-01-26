@@ -15,15 +15,16 @@ function getComputerChoice(){
 }
 
 
-let playerSelection = prompt("Choose your style");
-const CompterSelection = getComputerChoice();
+let p = prompt("Enter choice ");
+let c = getComputerChoice();
 
 alert("Computer choose " + getComputerChoice());
 
-function playRound(playerSelection, CompterSelection){
-    playerSelection  = playerSelection.toLocaleLowerCase();
-    let p = playerSelection;
-    let c = CompterSelection;
+function playRound(p, c){
+    p  = p.toLocaleLowerCase();
+    console.log(c);
+
+
 
     if (p === c){
         return "Draw";
@@ -54,5 +55,33 @@ function playRound(playerSelection, CompterSelection){
     }
 }
 
+function game(){
 
-console.log(playRound(playerSelection, CompterSelection));
+    p = prompt("Enter choice");
+    c = getComputerChoice();
+    alert("Computer choice " + c);
+    console.log(playRound(p, c));
+
+    p = prompt("Enter choice");
+    c = getComputerChoice();
+    alert("Computer choice " + c);
+    console.log(playRound(p, c));
+    
+    p = prompt("Enter choice");
+    c = getComputerChoice();
+    alert("Computer choice " + c);
+    console.log(playRound(p, c));
+    
+    p = prompt("Enter choice");
+    c = getComputerChoice();
+    alert("Computer choice " + c);
+    console.log(playRound(p, c));
+    
+    p = prompt("Enter choice");
+    c = getComputerChoice();
+    alert("Computer choice " + c);
+    console.log(playRound(p, c));  
+
+}
+
+game();
