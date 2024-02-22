@@ -1,87 +1,36 @@
+//setting random pc choice -------------------------------------------------
 function getComputerChoice(){
-    let compChoice = Math.floor(Math.random(1) * 3);
-
-    if (compChoice == 1){
-        return 'rock';
-    }
-    else if (compChoice == 2){
-        return 'paper';
-    }
-    else{
-        return 'scissors';
-    }
-
-
+    const pcChoice = ["Rock", "Paper", "Scissors"];
+    let randChoice = Math.floor(Math.random()*3);
+    console.log(pcChoice[randChoice])
+    return pcChoice[randChoice];
 }
 
 
-let p = prompt("Enter choice ");
-let c = getComputerChoice();
-
-alert("Computer choose " + getComputerChoice());
-
+// checking who won --------------------------------------------------------
 function playRound(p, c){
-    p  = p.toLocaleLowerCase();
-    console.log(c);
+    p = p.toLocaleLowerCase();
+    c = c.toLocaleLowerCase();
 
+    if (p == 'rock' && c == 'rock' || p == 'paper' && c == 'paper' || p == 'scissors' && rock == 'scissors')
+        return "Draw!";
 
+    else if (p == 'rock' && c == 'scissors' || p == 'scissors' && c == 'paper' || p == 'paper' && c == 'scissors')
+        return 'You win!';
 
-    if (p === c){
-        return "Draw";
-    }
-
-    else if(p==='rock' && c==='paper'){
-        return "You Loose";
-    }
-
-    else if(p==='rock' && c==='scissors'){
-        return "You Win";
-    }
-    
-    else if(p==='paper' && c==='rock'){
-        return "You Win";
-    }
-
-    else if(p==='paper' && c==='sicssors'){
-        return "You Loose";
-    }
-
-    else if(p==='sicssors' && c==='paper'){
-        return "You Win";
-    }
-
-    else if(p==='sicssors' && c==='rock'){
-        return "You Loose";
-    }
+    // if we only put else it would count typos from players
+    else if (p == 'rock' && c == 'paper' || p == 'scissors' && c == 'rock' || p == 'paper' && c == 'scissors')
+        return "You loose!"
 }
 
 function game(){
-
-    p = prompt("Enter choice");
-    c = getComputerChoice();
-    alert("Computer choice " + c);
-    console.log(playRound(p, c));
-
-    p = prompt("Enter choice");
-    c = getComputerChoice();
-    alert("Computer choice " + c);
-    console.log(playRound(p, c));
-    
-    p = prompt("Enter choice");
-    c = getComputerChoice();
-    alert("Computer choice " + c);
-    console.log(playRound(p, c));
-    
-    p = prompt("Enter choice");
-    c = getComputerChoice();
-    alert("Computer choice " + c);
-    console.log(playRound(p, c));
-    
-    p = prompt("Enter choice");
-    c = getComputerChoice();
-    alert("Computer choice " + c);
-    console.log(playRound(p, c));  
-
+    for(let i = 0; i < 5; i++){
+        let p = prompt("Enter your choice ");
+        let c = getComputerChoice();
+        alert("Computer choice " + c);
+        console.log(playRound(p, c))
+    }
 }
 
 game();
+
