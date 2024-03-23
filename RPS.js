@@ -1,3 +1,5 @@
+let roundResoult = document.createElement('div');
+
 let winPlayer = 0;
 let winPC = 0;
 let p;
@@ -19,6 +21,8 @@ function playRound(choice)
     c = c.toLocaleLowerCase();
     p = choice;
     p = p.toLocaleLowerCase();
+
+    console.log(c + " 1");
 
     if (p == c)
     {
@@ -58,5 +62,4 @@ function playRound(choice)
 
     document.getElementById("playerScore").innerHTML = winPlayer;
     document.getElementById("PCScore").innerHTML = winPlayer;
-    
 }
