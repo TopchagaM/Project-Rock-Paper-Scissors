@@ -58,4 +58,5 @@ function playRound(choice)
 
     document.getElementById("playerScore").innerHTML = winPlayer;
     document.getElementById("PCScore").innerHTML = winPlayer;
+    
 }
