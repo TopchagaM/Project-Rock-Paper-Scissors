@@ -36,15 +36,20 @@ function playRound(choice)
         roundResoult.textContent = "You WIN!"
         results.appendChild(roundResoult)
         winPlayer++;
+        console.log(winPlayer + ' WM')
+
     }
 
-// if we only put else it would count typos from players
     else
     {
         roundResoult.textContent = "You LOSE!"
         results.appendChild(roundResoult)
         winPC++;
+        console.log(winPC + ' WP')
     }
+
+    document.getElementById("playerScore").innerHTML = winPlayer;
+    document.getElementById("PCScore").innerHTML = winPC;
     
     if (winPlayer >= 5)
     {
@@ -60,6 +65,4 @@ function playRound(choice)
         winPC = 0;
     }
 
-    document.getElementById("playerScore").innerHTML = winPlayer;
-    document.getElementById("PCScore").innerHTML = winPlayer;
 }
