@@ -6,7 +6,18 @@
     <title>Document</title>
 </head>
 <body>
+    <button id="rock" onclick="playRound('Rock')">ROCK</button>
+    <button id="paper" onclick="playRound('Paper')">PAPER</button>
+    <button id="scissors" onclick="playRound('Scissors')">SCISSORS</button>
+
+    <div id="results"></div>
     
+    <div id="scoreDisplay">
+        <p>Player Score: </p>
+        <p id="playerScore"></p>
+        <p>Computer Score: </p>
+        <p id="PCScore"></p>
+    </div>
 </body>
 <script src="RPS.js"></script>
 </html>
